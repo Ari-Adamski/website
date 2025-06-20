@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ari-Adamski-1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ovo&family=Syne+Tactile&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .text-link,
+      .text-link:hover,
+      .text-link:visited,
+      .text-link:active {
+        all: unset; /* Removes all default browser styles */
+        color: inherit !important; /* Inherits gradient or fallback color */
+        text-decoration: none !important;
+        cursor: pointer;
+        font: inherit; /* Keeps font style from parent */
+      }
+      body {
+        background-color: #eeee;
+      }
+      p {
+        text-align: left;
+        line-height: 1.2;
+        font-size: 20px;
+        margin: 20px 20px 20px;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .gradient-text {
+        background: linear-gradient(270deg, #2d4059, #cad4f8, #1530f9, #fafafa);
+        background-size: 600% 600%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #1530f9; /* Fallback color for Firefox */
+        animation: gradient 30s ease infinite;
+        font-size: 3rem;
+        font-weight: 400;
+        font-family: "Grenze", serif;
+        font-style: italic;
+      }
+      .hvr-skew-backward .hvr-skew-backward {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        text-decoration: none !important;
+        /* Fallback visible color */
+        color: #2d4059; /* matches one of the colors from your gradient */
+
+        /* Remove underline */
+      }
+      /* On hover, apply skew + keep visibility */
+      .hvr-skew-backward:hover,
+      .hvr-skew-backward:focus,
+      .hvr-skew-backward:active {
+        -webkit-transform: skewX(-10deg);
+        transform: skewX(-10deg);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* subtle glow */
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="gradient-text">
+      Ari Adamski (she/her) is an artist and choreographer interested in the
+      entanglement of bodies and technologies — and the spaces they co-create.
+      Often wandering between sense and sensuality, Ari's work is characterized
+      by participatory processes and interdisciplinary storytelling, taking
+      shape in performances, radio pieces, and public interventions.
+      <br /><br />
+      This website is currently under construction. In the meantime, find traces
+      of Ari's work
+      <a
+        href="https://www.youtube.com/watch?v=lb2tklVXF0s"
+        target="_blank"
+        class="text-link hvr-skew-backward"
+        >here</a
+      >,
+      <a
+        href="https://youtu.be/JmaoY1NsLPw"
+        target="_blank"
+        class="text-link hvr-skew-backward"
+        >here</a
+      >, and
+      <a
+        href="https://soundcloud.com/hallo-radio/after-sleep/s-JpyUeT9BHtL?ref=clipboard&p=i&c=1&si=718B63FBCE2E4146B4AB5363EB854CE2"
+        target="_blank"
+        class="text-link hvr-skew-backward"
+        >here</a
+      >.
+      <br />
+      <a
+        class="text-link hvr-skew-backward"
+        href="mailto:contact@ariadamski.com"
+        >Contact Ari here</a
+      >
+    </p>
+  </body>
+</html>
