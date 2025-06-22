@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+body {
+  background-color: #eeee;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Grenze", serif;
+  overflow: visible; /* allows scrolling when needed */
+}
+
+.fullscreen-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* aligns text to top-left */
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+  padding: 5vw;
+  box-sizing: border-box;
+  overflow-y: auto; /* allows scrolling if needed */
+}
+.gradient-text {
+  background: linear-gradient(270deg, #2d4059, #cad4f8, #1530f9, #fafafa);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #1530f9; /* Fallback color for Firefox */
+  animation: gradient 30s ease infinite;
+  font-family: "Grenze", serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  /* Responsive font size */
+  font-size: clamp(18px, 6.5vw, 64px);
+  /* Prevent weird spacing issues */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.gradient-text + .gradient-text {
+  margin-top: 1em; /* adds space between paragraphs */
+}
+@media (max-width: 600px) {
+  .gradient-text {
+    font-size: clamp(18px, 6.5vw, 48px);
+    line-height: 1.4;
+  }
+  .image-container {
+    max-width: 120px;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.text-link {
+  /* Fully inherit parent styles */
+  color: inherit !important;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: bottom; /* aligns better visually */
+  transition: text-shadow 0.3s ease;
+}
+
+/* Add glow only on hover */
+.text-link:hover,
+.text-link:focus,
+.text-link:active {
+  text-shadow: 0 0 1px #fafafa, /* warm orange core glow */ 0 0 15px #ff5722,
+    /* soft white mid-glow */ 0 0 30px #fafafa; /* fading edge */
+}
+.image-container {
+  max-width: 200px;
+  padding: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  border-radius: 15%;
+}
+.image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
