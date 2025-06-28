@@ -10,6 +10,7 @@ body {
   height: 100%;
   font-family: "Grenze", serif;
   overflow: visible; /* allows scrolling when needed */
+  cursor: url("cursorstar.png") 8 8, auto;
 }
 
 .fullscreen-text {
@@ -100,4 +101,10 @@ body {
   border: none;
   padding: 0;
   cursor: pointer;
+}
+.gif-container {
+  max-width: 500px;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 10%;
 }
